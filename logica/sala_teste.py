@@ -8,7 +8,7 @@ class SalaTeste(unittest.TestCase):
 
     def test_adicionar_sala(self):
         sala.adicionar_sala(0, 60)
-        self.assertEqual(2, len(sala.salas))
+        self.assertEqual(1, len(sala.listar_salas()))
 
     def test_definir_status_ocupada(self):
         sala.adicionar_sala(0, 60)
@@ -23,30 +23,30 @@ class SalaTeste(unittest.TestCase):
     def test_remover_sala(self):
         sala.adicionar_sala(0, 60)
         sala.remover_sala(0)
-        self.assertEqual(0, len(sala.salas))
+        self.assertEqual(0, len(sala.listar_salas()))
 
     def test_remover_todas_salas(self):
         sala.adicionar_sala(0, 60)
         sala.adicionar_sala(1, 60)
         sala.adicionar_sala(2, 60)
         sala.remover_todas_salas()
-        self.assertEqual(0, len(sala.salas))
+        self.assertEqual(0, len(sala.listar_salas()))
 
     def test_listar_salas(self):
         sala.adicionar_sala(0, 60)
         sala.adicionar_sala(1, 60)
         sala.adicionar_sala(2, 60)
         salas = sala.listar_salas()
-        self.assertEqual(3, len(sala))
+        self.assertEqual(3, len(sala.listar_salas()))
 
     def test_buscar_lista(self):
         sala.adicionar_sala(0, 60)
         s = sala.buscar_sala(0)
         self.assertNotEqual(None, s)
 
-    def test_iniciar_sala():
+    def test_iniciar_sala(self):
         sala.iniciar_salas()
-        self.assertEqual(2, len(sala.salas))
+        self.assertEqual(2, len(sala.listar_salas()))
 
 if __name__ == '__main__':
-    unittest.main(exit=False)
+    unittest.main()
