@@ -22,7 +22,8 @@ def recuperar_sessao(cod_sessao):
             return c
     return None
 def verificar_lotacao(cod_sessao):
-    pass
+    for c in range(len(sessoes)):
+        return c[2]
 def listar_sessoes():
     return sessoes
 def remover_sessao(cod_sessao):
@@ -32,6 +33,10 @@ def remover_sessao(cod_sessao):
             return True
     return False
 def remover_todos_ingressos():
-    pass
+    global sessoes
+    global cod_sessao
+
+    sessoes = []
+    cod_sessao = 0
 def iniciar_ingressos():
-    pass
+    criar_sessao(1,1,1,"17:30")
