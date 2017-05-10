@@ -17,13 +17,20 @@ def criar_sessao(cod_sessao,cod_filme,cod_sala,horario):
     sessoes.append(sessao)
     
 def recuperar_sessao(cod_sessao):
-    pass
+    for c in sessoes:
+        if (c[0] == cod_sessao):
+            return c
+    return None
 def verificar_lotacao(cod_sessao):
     pass
 def listar_sessoes():
     return sessoes
 def remover_sessao(cod_sessao):
-    pass
+    for c in sessoes:
+        if (c[0] == cod_sessao):
+            sessoes.remove(c)
+            return True
+    return False
 def remover_todos_ingressos():
     pass
 def iniciar_ingressos():
