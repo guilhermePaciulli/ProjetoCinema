@@ -1,7 +1,7 @@
 import unittest
-from logica import sala
+import sala
 
-class SalaTeste(unittest, TestCase):
+class SalaTeste(unittest.TestCase):
 
     def setUp(self):
         sala.remover_todas_salas()
