@@ -19,5 +19,5 @@ def remover_todas_atores():
     atores = []
 
 def iniciar_atores():
-    cadastrar_ator(0, "Morgan Freeman", "EUA", 60)
+    cadastrar_ator(0, "Morgan Freeman", "EUA", 79)
     cadastrar_ator(1, "Tony Ramos", "BR", 54)
