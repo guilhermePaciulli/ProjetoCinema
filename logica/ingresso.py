@@ -1,3 +1,5 @@
+import sessao
+
 ingresso =[]
 
 def venda_ingreso_meia(cod_sessao):
@@ -10,16 +12,24 @@ def listar_ingresso_vendidos(cod_sessao):
     pass
 
 def listar_ingressos():
-    pass
+    return ingresso
 
 def buscar_ingresso(cod_ingresso):
-    pass
+    for c in ingresso:
+        if (c[0] == cod_ingresso):
+            return c
+    return None
 
 def remover_ingresso(cod_ingresso):
-    pass
+    for c in ingresso:
+        if (c[0] == cod_ingresso):
+            ingresso.remove(c)
+            return True
+        return False
 
 def remover_todos_ingresso(cod_ingresso):
-    pass
+    global ingresso
+    ingresso = []
 
 def iniciar_ingressos():
     pass
