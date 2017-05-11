@@ -15,7 +15,7 @@ def remover_ator(cod_ator):
 def buscar_atores():
     return atores
 
-def remover_todas_atores():
+def remover_todos_atores():
     global atores
     atores = []
 
