@@ -24,6 +24,7 @@ def remover_sala(cod_sala):
     salas.remove(buscar_sala(cod_sala))
 
 def remover_todas_salas():
+    global salas
     salas = []
 
 def iniciar_salas():
