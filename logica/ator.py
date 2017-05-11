@@ -16,6 +16,7 @@ def buscar_atores():
     return atores
 
 def remover_todas_atores():
+    global atores
     atores = []
 
 def iniciar_atores():

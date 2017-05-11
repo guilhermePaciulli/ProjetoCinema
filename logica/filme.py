@@ -13,6 +13,7 @@ def listar_filmes():
     return filmes
 
 def remover_todos_filmes():
+    global filme
     filmes = []
 
 def iniciar_filmes():
