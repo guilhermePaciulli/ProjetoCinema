@@ -6,6 +6,13 @@ def menu_adicionar_sala():
     lotacao = int(input("Digite a lotação da sala:"))
     sala.salas.append(cod_sala,lotacao)
 
+def menu_sala_ocupada():
+    print("\nTornar sala ocupada!\n")
+    cod_sala = int(input("Digite o código da sala:"))
+    sala.definir_status_ocupada(cod_sala)
+
+
+
 def _imprimir_sala(sala):
     print("Código da sala:", sala[0])
     print("Lotação da sala:",sala[1])
@@ -34,5 +41,7 @@ def menu_remover_sala():
     cod_sala = int(input("Digite o código da sala:"))
     s = sala.remover_sala(cod_sala)
     if (s == False):
-        print("
+        print("Sala nã encontrada!")
+    else:
+        print("Sala removida!")
     
