@@ -1,9 +1,9 @@
-import menu_sessao
-import menu_ator
-import menu_filme
-import menu_sala
-import menu_elenco
-import menu_ingresso
+from gui import menu_sessao
+from gui import menu_ator
+from gui import menu_filme
+from gui import menu_sala
+from gui import menu_elenco
+from gui import menu_ingresso
 
 def limparTela():
     for i in range(0, 30):

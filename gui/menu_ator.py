@@ -23,7 +23,7 @@ def menu_buscar_ator():
         print("Ator não encontrado!")
     else:
         _imprimir_ator(ator)
-        
+
 def menu_listar_atores():
     print("\nListar Atores:\n")
     atores = ator.buscar_atores()
@@ -43,30 +43,26 @@ def menu_remover_atores():
     ator.remover_atores()
     print("Todos os atores foram removidos do banco de dados!")
 
-def mostrar_menu():
-    run_ator = True
-    menu = ("\n----------------\n"+
-             "(1) Adicionar novo ator \n" +
-             "(2) Listar atores \n" +
-             "(3) Buscar ator por código \n" +
-             "(4) Remover ator \n" +
-             "(5) Remover todos os atores \n" +
-             "(0) Voltar\n"+
-            "----------------")
-    
-    while(run_medico):
-        print (menu)
+def menu():
+    while(True):
+        print("1 - Adicionar novo ator")
+        print("2 - Listar atores")
+        print("3 - Buscar ator por código")
+        print("4 - Remover ator")
+        print("5 - Remover todos os atores")
+        print("6 - Voltar")
+
         op = int(input("Digite sua escolha: "))
 
         if (op == 1):
             menu_adicionar_ator()
         elif(op == 2):
             menu_listar_atores()
-        elif(op == 3):       
+        elif(op == 3):
             menu_buscar_ator()
         elif (op == 4):
             menu_remover_ator()
         elif (op == 5):
             menu_remover_atores()
         elif (op == 0):
-            run_medico = False 
+            break
