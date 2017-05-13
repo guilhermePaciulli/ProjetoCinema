@@ -1,15 +1,28 @@
 import sessao
 
 ingresso =[]
+def _venda_ingresso(cod_sessao):
+    s = sessao.verificar_lotacao(cod_sessao)
+    if s != None:
+        if !s :
+            ingresso.append(cod_sessao)
+            s[4] -= 1
+        else:
+            print("Sessão ocupada")
+    else:
+        print("Código de sessão inválido")
 
 def venda_ingreso_meia(cod_sessao):
-    pass
+    _venda_ingresso(cod_sessao)
 
 def venda_ingresso_inteira(cod_sessao):
-    pass
+    _venda_ingresso(cod_sessao)
 
 def listar_ingresso_vendidos(cod_sessao):
-    pass
+    ingressosVendidos = []
+    for i in ingresso:
+        ingressosVendidos.append(i)
+    return ingressosVendidos
 
 def listar_ingressos():
     return ingresso

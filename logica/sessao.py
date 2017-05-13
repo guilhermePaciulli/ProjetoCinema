@@ -4,17 +4,21 @@ import sala
 sessoes = []
 
 def criar_sessao(cod_sessao,cod_filme,cod_sala,horario):
-    sessoes.append([cod_sessao,cod_filme,cod_sala,horario])
+    f = filme.buscar_filme(cod_filme)
+    s = sala.buscar_sala(cod_sala)
+    sessoes.append([cod_sessao,f,s,horario, s[1]])
 
 def recuperar_sessao(cod_sessao):
     for c in sessoes:
         if (c[0] == cod_sessao):
             return c
     return None
-    
+
 def verificar_lotacao(cod_sessao):
-    for c in range(len(sessoes)):
-        return c[2]
+    for s in sessoes:
+        if s[0] == cod_sessao:
+            return s[4] < 0:
+    return None
 
 def listar_sessoes():
     return sessoes
