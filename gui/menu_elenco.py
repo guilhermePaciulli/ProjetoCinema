@@ -24,6 +24,15 @@ def menu_buscar_elenco():
     else:
         _imprimir_elenco(elenco)
 
+def menu_buscar_elenco_por_filme():
+    print("\nBuscar elenco por filme:\n")
+    cod_filme = int(input("Digite o código do filme:"))
+    elenco = elenco.buscar_elenco_por_filme(cod_filme)
+    if (cod_filme == None):
+        print("Elenco não encontrado!")
+    else:
+        _imprimir_elenco(elenco)
+
 def menu_listar_elencos():
     print("\nListar elencos:\n")
     elenco = elenco.buscar_elenco()
