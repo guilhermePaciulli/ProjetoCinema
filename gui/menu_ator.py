@@ -50,7 +50,7 @@ def menu():
         print("3 - Buscar ator por código")
         print("4 - Remover ator")
         print("5 - Remover todos os atores")
-        print("6 - Voltar")
+        print("0 - Voltar")
 
         op = int(input("Digite sua escolha: "))
 
