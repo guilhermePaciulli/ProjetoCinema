@@ -1,3 +1,4 @@
+import menu_inicial
 from logica import filme
 
 def menu_adicionar_filme():
@@ -77,3 +78,4 @@ def menu():
             menu_remover_todos_filmes()
         elif(op == 6):
             break
+        menu_inicial.limparTela()

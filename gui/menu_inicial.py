@@ -5,9 +5,23 @@ from gui import menu_sala
 from gui import menu_elenco
 from gui import menu_ingresso
 
+from logica import sessao
+from logica import ator
+from logica import filme
+from logica import sala
+from logica import elenco
+from logica import ingresso
+
 def limparTela():
     for i in range(0, 30):
         print("")
+#Initial SetUp
+sala.iniciar_salas()
+ator.iniciar_atores()
+filme.iniciar_filmes()
+elenco.iniciar_elencos()
+sessao.iniciar_sessoes()
+ingresso.iniciar_ingressos()
 
 while True:
     print("Bem vindo ao CineMania")

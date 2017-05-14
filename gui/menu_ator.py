@@ -1,3 +1,4 @@
+import menu_inicial
 from logica import ator
 
 def menu_adicionar_ator():
@@ -67,3 +68,4 @@ def menu():
             menu_remover_atores()
         elif (op == 6):
             break
+        menu_inicial.limparTela()

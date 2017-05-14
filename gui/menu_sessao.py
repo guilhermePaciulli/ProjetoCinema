@@ -1,3 +1,4 @@
+import menu_inicial
 from logica import sessao
 
 def menu_adicionar_sessao():
@@ -71,3 +72,4 @@ def menu():
             menu_remover_todas_sessoes()
         elif(op == 6):
             break
+        menu_inicial.limparTela()

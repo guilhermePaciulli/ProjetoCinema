@@ -1,3 +1,4 @@
+import menu_inicial
 from logica import elenco
 
 def menu_adicionar_elenco():
@@ -86,3 +87,4 @@ def menu():
             menu_remover_todos_elencos()
         elif(op == 7):
             break
+        menu_inicial.limparTela()
