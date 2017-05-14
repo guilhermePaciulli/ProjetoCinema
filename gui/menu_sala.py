@@ -65,20 +65,20 @@ def menu():
 
         op = int(input("Digite sua escolha: "))
 
-        if (op == 1):
+        if(op == 1):
             menu_adicionar_sala()()
         elif(op == 2):
             menu_sala_ocupada()
         elif(op == 3):
             menu_sala_livre()
-        elif (op == 4):
+        elif(op == 4):
             menu_buscar_sala()
-        elif (op == 5):
+        elif(op == 5):
             menu_listar_salas()
-        elif (op == 6):
+        elif(op == 6):
             menu_remover_sala()
-        elif (op == 7):
+        elif(op == 7):
             menu_remover_todas_salas()
-        elif (op == 0):
+        elif(op == 0):
             break
 
