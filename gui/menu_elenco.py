@@ -11,8 +11,8 @@ def _imprimir_elenco(elenco):
     atores = elenco.consultar_atores_por_filme(elenco[0])
     for a in atores:
         print("Ator do elenco:",a[1])
-        print("Nacionalidade do ator:",ator[2])
-        print("Tipo do ator:",ator[3])
+        print("Nacionalidade do ator:",a[2])
+        print("Tipo do ator:",a[3])
     print()
 
 def menu_buscar_elenco():
