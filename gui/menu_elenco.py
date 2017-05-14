@@ -68,8 +68,6 @@ def menu():
         print("7 - Voltar")
 
         op = int(input("Digite sua escolha: "))
-                while op < 1 or op > 6:
-                    op = int(input("Entre com uma escolha válida: "))
         while op < 1 or op > 7:
             op = int(input("Entre com uma escolha válida: "))
 
