@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 filmes = []
 
 def cadastrar_filme(cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero):

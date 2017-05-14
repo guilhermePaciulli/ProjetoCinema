@@ -17,7 +17,7 @@ def recuperar_sessao(cod_sessao):
 def verificar_lotacao(cod_sessao):
     for s in sessoes:
         if s[0] == cod_sessao:
-            return s[4] < 0
+            return s[4] <= 0
     return None
 
 def listar_sessoes():

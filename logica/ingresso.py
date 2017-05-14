@@ -2,23 +2,24 @@ import sessao
 
 ingresso =[]
 def _venda_ingresso(cod_sessao):
-    s = sessao.verificar_lotacao(cod_sessao)
+    s = sessao.recuperar_sessao(cod_sessao)
     if s != None:
-        if not(s) :
+        lot = sessao.verificar_lotacao(cod_sessao)
+        if not(lot) :
             cod_ingresso = len(ingresso)
             ingresso.append([cod_sessao, cod_ingresso])
             s[4] -= 1
-            return [True, str(cod_ingresso)]
+            return str(cod_ingresso)
         else:
-            return [False, -1]
+            return False
     else:
-        return [False, -1]
+        return None
 
 def venda_ingresso_meia(cod_sessao):
-    _venda_ingresso(cod_sessao)
+    return _venda_ingresso(cod_sessao)
 
 def venda_ingresso_inteira(cod_sessao):
-    _venda_ingresso(cod_sessao)
+    return _venda_ingresso(cod_sessao)
 
 def listar_ingresso_vendidos(cod_sessao):
     ingressosVendidos = []
@@ -44,7 +45,7 @@ def remover_ingresso(cod_ingresso):
             return True
         return False
 
-def remover_todos_ingresso(cod_ingresso):
+def remover_todos_ingresso():
     for i in ingresso:
         sessao.recuperar_sessao(i[0])[4] += 1
     global ingresso
