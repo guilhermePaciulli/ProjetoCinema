@@ -12,8 +12,11 @@ def buscar_filme(cod_filme):
 def listar_filmes():
     return filmes
 
+def remover_filme():
+    filmes.remove(buscar_filme(cod_filme))
+
 def remover_todos_filmes():
-    global filme
+    global filmes
     filmes = []
 
 def iniciar_filmes():
