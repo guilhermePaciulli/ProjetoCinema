@@ -6,7 +6,10 @@ sessoes = []
 def criar_sessao(cod_sessao,cod_filme,cod_sala,horario):
     f = filme.buscar_filme(cod_filme)
     s = sala.buscar_sala(cod_sala)
-    sessoes.append([cod_sessao,f,s,horario, s[1]])
+    if s != None and f != None:
+        sessoes.append([cod_sessao,f,s,horario, s[1]])
+        return True
+    return False
 
 def recuperar_sessao(cod_sessao):
     for c in sessoes:
@@ -30,9 +33,10 @@ def remover_sessao(cod_sessao):
             return True
     return False
 
-def remover_todos_ingressos():
+def remover_todas_sessoes():
     global sessoes
     sessoes = []
 
-def iniciar_ingressos():
-    criar_sessao(1,1,1,"17:30")
+def iniciar_sessoes():
+    criar_sessao(0, 0, 0, "19:30")
+    criar_sessao(1, 1, 1, "17:30")

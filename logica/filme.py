@@ -3,7 +3,7 @@
 filmes = []
 
 def cadastrar_filme(cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero):
-    filmes.append(cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero)
+    filmes.append([cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero])
 
 def buscar_filme(cod_filme):
     for f in filmes:
