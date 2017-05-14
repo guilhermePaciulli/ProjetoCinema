@@ -12,7 +12,9 @@ def adicionar_ator(cod_elenco, cod_ator, cod_filme, tipo):
         else:
             a = ator.buscar_ator(cod_ator)
             f = filme.buscar_filme(cod_filme)
-            elencos.append([cod_elenco, [{a, tipo}], f])
+            elencos.append([cod_elenco, [[a, tipo]], f])
+        return True
+    return False
 
 def consultar_atores_por_filme(cod_elenco):
     for e in elencos:
@@ -39,4 +41,4 @@ def remover_todos_elencos():
 
 def iniciar_elencos():
     adicionar_ator(0, 0, 0, "Principal")
-    adicionar_ator(0, 0, 0, "Coadjuvante")
+    adicionar_ator(1, 1, 1, "Coadjuvante")

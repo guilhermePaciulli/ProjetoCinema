@@ -1,10 +1,14 @@
 from logica import elenco
 
 def menu_adicionar_elenco():
-    print("\nAdicionar elenco:\n")
+    print("\nAdicionar ator ao elenco:\n")
     cod_elenco = int(input("Digite o código do elenco:"))
+    cod_ator = input(input("Digite o código do ator:"))
     tipo = input("Digite o tipo do papel do ator:"))
-    elenco.adicionar_ator(cod_elenco,cod_ator,cod_filme,tipo)
+    cod_filme = input(input("Digite o código do filme:"))
+    b = elenco.adicionar_ator(cod_elenco,cod_ator,cod_filme,tipo)
+    if not(b):
+        print("Código do filme ou do ator inválido(s)")
 
 def _imprimir_elenco(elenco):
     print("Código do elenco:",elenco[0])
@@ -54,7 +58,7 @@ def menu_remover_todos_elencos():
 
 def menu():
     while(True):
-        print("1 - Adicionar novo elenco")
+        print("1 - Adicionar ator ao ou adicionar novo elenco")
         print("2 - Listar elencos")
         print("3 - Buscar elenco por código")
         print("4 - Buscar elenco por filme")
@@ -75,6 +79,6 @@ def menu():
         elif(op == 5):
             menu_remover_elenco()
         elif(op == 6):
-            menu_remover_todos_elencos()                            
+            menu_remover_todos_elencos()
         elif(op == 0):
             break
