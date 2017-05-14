@@ -22,7 +22,7 @@ def _imprimir_filme(filme):
     print("Status do filme:",filme[6])
     print("Gênero do filme:",filme[7])
     print("")
-    
+
 def menu_buscar_filme():
     print("\nBuscar filme por código:\n")
     cod_filme = int(input("Digite o código do filme:"))
@@ -58,9 +58,12 @@ def menu():
         print("3 - Buscar filme por código")
         print("4 - Remover filme")
         print("5 - Remover todos os filmes")
-        print("0 - Voltar")
+        print("6 - Voltar")
 
         op = int(input("Digite sua escolha: "))
+
+        while op < 1 or op > 6:
+            op = int(input("Entre com uma escolha válida: "))
 
         if(op == 1):
             menu_adicionar_filme()
@@ -71,7 +74,6 @@ def menu():
         elif(op == 4):
             menu_remover_filme()
         elif(op == 5):
-            menu_remover_todos_filmes()                           
-        elif(op == 0):
+            menu_remover_todos_filmes()
+        elif(op == 6):
             break
-

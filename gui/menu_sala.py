@@ -61,9 +61,12 @@ def menu():
         print("5 - Listar salas")
         print("6 - Remover sala por código")
         print("7 - Remover todas as salas")
-        print("0 - Voltar")
+        print("8 - Voltar")
 
         op = int(input("Digite sua escolha: "))
+
+        while op < 1 or op > 8:
+            op = int(input("Entre com uma escolha válida: "))
 
         if(op == 1):
             menu_adicionar_sala()()
@@ -79,6 +82,5 @@ def menu():
             menu_remover_sala()
         elif(op == 7):
             menu_remover_todas_salas()
-        elif(op == 0):
+        elif(op == 8):
             break
-

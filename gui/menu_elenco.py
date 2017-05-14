@@ -64,9 +64,13 @@ def menu():
         print("4 - Buscar elenco por filme")
         print("5 - Remover elenco")
         print("6 - Remover todos os elencos")
-        print("0 - Voltar")
+        print("7 - Voltar")
 
         op = int(input("Digite sua escolha: "))
+                while op < 1 or op > 6:
+                    op = int(input("Entre com uma escolha válida: "))
+        while op < 1 or op > 7:
+            op = int(input("Entre com uma escolha válida: "))
 
         if(op == 1):
             menu_adicionar_elenco()
@@ -80,5 +84,5 @@ def menu():
             menu_remover_elenco()
         elif(op == 6):
             menu_remover_todos_elencos()
-        elif(op == 0):
+        elif(op == 7):
             break

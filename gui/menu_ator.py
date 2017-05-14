@@ -50,10 +50,11 @@ def menu():
         print("3 - Buscar ator por código")
         print("4 - Remover ator")
         print("5 - Remover todos os atores")
-        print("0 - Voltar")
+        print("6 - Voltar")
 
         op = int(input("Digite sua escolha: "))
-
+        while op < 1 or op > 6:
+            op = int(input("Entre com uma escolha válida: "))
         if (op == 1):
             menu_adicionar_ator()
         elif(op == 2):
@@ -64,5 +65,5 @@ def menu():
             menu_remover_ator()
         elif (op == 5):
             menu_remover_atores()
-        elif (op == 0):
+        elif (op == 6):
             break
