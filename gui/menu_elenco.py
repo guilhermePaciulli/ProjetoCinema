@@ -12,7 +12,7 @@ def _imprimir_elenco(elenco):
     for a in atores:
         print("Ator do elenco:",a[1])
         print("Nacionalidade do ator:",ator[2])
-    print(":",ator[3])
+        print("Tipo do ator:",ator[3])
     print()
 
 def menu_buscar_elenco():
@@ -39,39 +39,42 @@ def menu_listar_elencos():
     for e in elencos:
         _imprimir_elenco(e)
 
-def menu_remover_ator():
-    print("\nRemover Ator:\n")
-    cod_ator = int(input("Digite o código do ator:"))
-    a = ator.remover_ator(cod_ator)
-    if (a == False):
-        print("Ator não encontrado!")
+def menu_remover_elenco():
+    print("\nRemover Elenco:\n")
+    cod_elenco = int(input("Digite o código do elenco:"))
+    e = elenco.remover_elenco(cod_elenco)
+    if (e == False):
+        print("Elenco não encontrado!")
     else:
-        print("Ator Removido")
+        print("Elenco Removido")
 
-def menu_remover_atores():
-    ator.remover_atores()
-    print("Todos os atores foram removidos do banco de dados!")
+def menu_remover_todos_elencos():
+    elenco.remover_todos_elencos()
+    print("Todos os elencos foram removidos do banco de dados!")
 
 def menu():
     while(True):
-        print("1 - Adicionar novo ator")
-        print("2 - Listar atores")
-        print("3 - Buscar ator por código")
-        print("4 - Remover ator")
-        print("5 - Remover todos os atores")
+        print("1 - Adicionar novo elenco")
+        print("2 - Listar elencos")
+        print("3 - Buscar elenco por código")
+        print("4 - Buscar elenco por filme")
+        print("5 - Remover elenco")
+        print("6 - Remover todos os elencos")
         print("0 - Voltar")
 
         op = int(input("Digite sua escolha: "))
 
-        if (op == 1):
-            menu_adicionar_ator()
+        if(op == 1):
+            menu_adicionar_elenco()
         elif(op == 2):
-            menu_listar_atores()
+            menu_listar_elencos()
         elif(op == 3):
-            menu_buscar_ator()
-        elif (op == 4):
-            menu_remover_ator()
-        elif (op == 5):
-            menu_remover_atores()
-        elif (op == 0):
+            menu_buscar_elenco()
+        elif(op == 4):
+            menu_buscar_elenco_por_filme()
+        elif(op == 5):
+            menu_remover_elenco()
+        elif(op == 6):
+            menu_remover_todos_elencos()                            
+        elif(op == 0):
             break
