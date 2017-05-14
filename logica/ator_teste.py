@@ -4,7 +4,7 @@ import ator
 class AtorTeste(unittest.TestCase):
 
     def setUp(self):
-        ator.remover_todas_atores()
+        ator.remover_todos_atores()
 
     def test_cadastrar_ator(self):
         ator.cadastrar_ator(0, 0, 0, "Principal")
@@ -33,7 +33,7 @@ class AtorTeste(unittest.TestCase):
         ator.cadastrar_ator(1, 0, 0, "Coadjuvante")
         ator.cadastrar_ator(2, 0, 0, "Figurante")
         ator.cadastrar_ator(3, 0, 0, "Coadjuvante")
-        ator.remover_todas_atores()
+        ator.remover_todos_atores()
         self.assertEquals(0, len(ator.buscar_atores()))
 
     def test_iniciar_atores(self):
