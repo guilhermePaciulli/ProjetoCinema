@@ -21,7 +21,7 @@ def venda_ingresso_meia(cod_sessao):
 def venda_ingresso_inteira(cod_sessao):
     return _venda_ingresso(cod_sessao)
 
-def listar_ingresso_vendidos(cod_sessao):
+def listar_ingressos_vendidos(cod_sessao):
     ingressosVendidos = []
     for i in ingresso:
         if i == cod_sessao:
