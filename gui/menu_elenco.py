@@ -58,7 +58,7 @@ def menu_remover_todos_elencos():
 
 def menu():
     while(True):
-        print("1 - Adicionar ator ao ou adicionar novo elenco")
+        print("1 - Adicionar ator ao elenco ou adicionar novo elenco")
         print("2 - Listar elencos")
         print("3 - Buscar elenco por código")
         print("4 - Buscar elenco por filme")
