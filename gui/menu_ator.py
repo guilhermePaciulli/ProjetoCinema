@@ -1,10 +1,12 @@
+# -*- coding: utf-8 -*-
+
 import menu_inicial
 from logica import ator
 
 def menu_adicionar_ator():
     print("\nAdicionar ator:\n")
     cod_ator = int(input("Digite o código do ator:"))
-    nome = input("Digite o nome do ator:"))
+    nome = input("Digite o nome do ator:")
     nacionalidade = input("Digite a nacionalidade:")
     idade = int(input("Digite a idade:"))
     ator.cadastrar_ator(cod_ator,nome,nacionalidade,idade)
@@ -41,7 +43,7 @@ def menu_remover_ator():
         print("Ator Removido")
 
 def menu_remover_atores():
-    ator.remover_atores()
+    ator.remover_todos_atores()
     print("Todos os atores foram removidos do banco de dados!")
 
 def menu():
@@ -68,4 +70,3 @@ def menu():
             menu_remover_atores()
         elif (op == 6):
             break
-        menu_inicial.limparTela()

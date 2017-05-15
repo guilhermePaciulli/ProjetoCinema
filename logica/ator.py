@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 atores = []
 
 def cadastrar_ator(cod_ator, nome, nacionalidade, idade):

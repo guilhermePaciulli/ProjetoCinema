@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from logica import sessao
 from logica import filme
 from logica import ingresso
@@ -25,12 +27,12 @@ def menu_vender_ingresso_inteira():
         print("Sessão lotada!")
     else:
         print("\nVenda concluída com sucesso!\n")
-    
+
 def _imprimir_ingresso(ingresso):
     print("Código da sessão:",ingresso[0])
     print("Código do ingresso:",ingresso[1])
     print("")
-    
+
 def menu_buscar_ingresso():
     print("\nBuscar ingresso por código:\n")
     cod_ingresso = int(input("Digite o código do ingresso:"))
@@ -57,7 +59,7 @@ def menu_remover_ingresso():
     print("\nRemover Ingresso:\n")
     cod_ingresso = int(input("Digite o código do ingresso:"))
     i = ingresso.remover_ingreso(cod_ingresso)
-    if == False:
+    if i == False:
         print("Ingresso não encontrado!")
     else:
         print("Ingresso Removido!")
@@ -78,7 +80,7 @@ def menu():
         print("8 - Voltar")
 
         op = int(input("Digite sua escolha: "))
-                
+
         while op < 1 or op > 8:
             op = int(input("Entre com uma escolha válida: "))
 
@@ -98,8 +100,3 @@ def menu():
             menu_remover_todos_ingressos
         elif(op == 8):
             break
-        menu_inicial.limparTela()
-
-
-
-

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 salas = []
 
 def adicionar_sala(cod_sala, lotacao):

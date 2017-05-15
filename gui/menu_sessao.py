@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import menu_inicial
 from logica import sessao
 
@@ -6,7 +8,7 @@ def menu_adicionar_sessao():
     cod_sessao = int(input("Digite o código da sessão:"))
     cod_filme = int(input("Digite o código do filme:"))
     cod_sala = int(input("Digite o código da sala:"))
-    horario = input("Digite o horário da sessão:"))
+    horario = input("Digite o horário da sessão:")
     b = sessao.criar_sessao(cod_sessao,cod_filme,cod_sala,horario)
     if b:
         print("Sessão adicionada com sucesso")
@@ -72,4 +74,3 @@ def menu():
             menu_remover_todas_sessoes()
         elif(op == 6):
             break
-        menu_inicial.limparTela()

@@ -1,12 +1,14 @@
+# -*- coding: utf-8 -*-
+
 import menu_inicial
 from logica import elenco
 
 def menu_adicionar_elenco():
     print("\nAdicionar ator ao elenco:\n")
-    cod_elenco = int(input("Digite o código do elenco:"))
-    cod_ator = input(input("Digite o código do ator:"))
-    tipo = input("Digite o tipo do papel do ator:"))
-    cod_filme = input(input("Digite o código do filme:"))
+    cod_elenco = input("Digite o código do elenco:")
+    cod_ator = input("Digite o código do ator:")
+    tipo = input("Digite o tipo do papel do ator:")
+    cod_filme = input("Digite o código do filme:")
     b = elenco.adicionar_ator(cod_elenco,cod_ator,cod_filme,tipo)
     if not(b):
         print("Código do filme ou do ator inválido(s)")
@@ -85,4 +87,3 @@ def menu():
             menu_remover_todos_elencos()
         elif(op == 7):
             break
-        menu_inicial.limparTela()

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import menu_inicial
 from logica import sala
 
@@ -85,4 +87,3 @@ def menu():
             menu_remover_todas_salas()
         elif(op == 8):
             break
-        menu_inicial.limparTela()

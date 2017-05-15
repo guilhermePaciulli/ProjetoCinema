@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import menu_inicial
 from logica import filme
 
@@ -6,11 +8,11 @@ def menu_adicionar_filme():
     cod_filme = int(input("Digite o código do filme:"))
     titulo = input("Digite o título do filme:")
     duracao = float(input("Digite a duração do filme:"))
-    classificacao = input("Digite a classificação do filme:"))
-    diretor = input("Digite o diretor do filme:"))
-    dist = input("Digite a distribuidora do filme:"))
-    status = input("Digite o status do filme:"))
-    genero = input("Digite o genero do filme:"))
+    classificacao = input("Digite a classificação do filme:")
+    diretor = input("Digite o diretor do filme:")
+    dist = input("Digite a distribuidora do filme:")
+    status = input("Digite o status do filme:")
+    genero = input("Digite o gênero do filme:")
     filme.cadastrar_filme(cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero)
 
 def _imprimir_filme(filme):
@@ -78,4 +80,3 @@ def menu():
             menu_remover_todos_filmes()
         elif(op == 6):
             break
-        menu_inicial.limparTela()
