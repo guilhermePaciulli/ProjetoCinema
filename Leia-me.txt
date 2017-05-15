@@ -1,9 +1,9 @@
 Integrantes:
 Bruno Dutra - 41614437
 Guilherme Paciulli - 41606574
-Lucas Lanzani - 416
+Lucas Lanzani - 41623894
 
 Link para o GitHub:
 https://github.com/guilhermePaciulli/ProjetoCinema
 
-Rodar o main.py
+Para iniciar o sistema basta rodar o main.py
