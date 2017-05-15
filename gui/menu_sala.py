@@ -5,7 +5,7 @@ from logica import sala
 def menu_adicionar_sala():
     print("\nAdicionar sala:")
     cod_sala = (input("Digite o código da sala:"))
-    lotacao = (input("Digite a lotação da sala:"))
+    lotacao = int(input("Digite a lotação da sala:"))
     sala.adicionar_sala(cod_sala, lotacao)
 
 def menu_sala_ocupada():

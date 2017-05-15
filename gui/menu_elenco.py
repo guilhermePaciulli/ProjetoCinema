@@ -51,7 +51,7 @@ def menu_buscar_elenco_por_filme():
 
 def menu_remover_elenco():
     print("\nRemover Elenco:\n")
-    cod_elenco = int(input("Digite o código do elenco:"))
+    cod_elenco = (input("Digite o código do elenco:"))
     e = elenco.remover_elenco(cod_elenco)
     if (e == False):
         print("Elenco não encontrado!")

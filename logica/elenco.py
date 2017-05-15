@@ -30,7 +30,11 @@ def buscar_elenco(cod_elenco):
     return None
 
 def remover_elenco(cod_elenco):
-    elencos.remove(buscar_elenco(cod_elenco))
+    x = buscar_elenco(cod_elenco)
+    if x != None:
+        elencos.remove(x)
+        return True
+    return False
 
 def buscar_elenco_por_filme(cod_filme):
     for e in elencos:

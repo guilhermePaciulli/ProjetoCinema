@@ -40,5 +40,5 @@ def remover_todas_sessoes():
     sessoes = []
 
 def iniciar_sessoes():
-    criar_sessao(0, 0, 0, "19:30")
-    criar_sessao(1, 1, 1, "17:30")
+    criar_sessao("0", "0", "0", "19:30")
+    criar_sessao("1", "1", "1", "17:30")

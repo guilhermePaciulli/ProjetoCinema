@@ -30,5 +30,5 @@ def remover_todas_salas():
     salas = []
 
 def iniciar_salas():
-    adicionar_sala(0, 40)
-    adicionar_sala(1, 60)
+    adicionar_sala("0", 40)
+    adicionar_sala("1", 60)

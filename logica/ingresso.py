@@ -45,11 +45,13 @@ def remover_ingresso(cod_ingresso):
             sessao.recuperar_sessao(i[0])[4] += 1
             ingresso.remove(i)
             return True
-        return False
+    return False
 
 def remover_todos_ingresso():
     global ingresso
     ingresso = []
+    for s in sessao.sessoes:
+        s[4] = s[2][1]
 
 def iniciar_ingressos():
     venda_ingresso_meia("0")

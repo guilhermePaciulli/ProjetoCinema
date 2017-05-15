@@ -14,11 +14,11 @@ def menu_adicionar_sessao():
     else:
         print("Código do filme ou da sala inválido(s) ou sala lotada!")
 
-def _imprimir_sessao(sessao):
-    print("Código da sessão:",sessao[0])
-    print("Código do filme:",sessao[1])
-    print("Código da sala:",sessao[2])
-    print("Horário da sessão:",sessao[3])
+def _imprimir_sessao(s):
+    print("Código da sessão:",s[0])
+    print("Código do filme:",s[1][0])
+    print("Código da sala:",s[2][0])
+    print("Horário da sessão:",s[3])
     print("")
 
 def menu_buscar_sessao():
@@ -32,8 +32,8 @@ def menu_buscar_sessao():
 
 def menu_listar_sessoes():
     print("\nListar sessões:\n")
-    sessoes = sessao.listar_sessoes()
-    for s in sessoes:
+    se = sessao.listar_sessoes()
+    for s in se:
         _imprimir_sessao(s)
 
 def menu_remover_sessao():

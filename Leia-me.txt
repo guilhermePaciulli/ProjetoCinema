@@ -1,0 +1,9 @@
+Integrantes:
+Bruno Dutra - 41614437
+Guilherme Paciulli - 41606574
+Lucas Lanzani - 416
+
+Link para o GitHub:
+https://github.com/guilhermePaciulli/ProjetoCinema
+
+Rodar o main.py
