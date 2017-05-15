@@ -4,10 +4,10 @@ from logica import ator
 
 def menu_adicionar_ator():
     print("\nAdicionar ator:\n")
-    cod_ator = int(input("Digite o código do ator:"))
+    cod_ator = input("Digite o código do ator:")
     nome = input("Digite o nome do ator:")
     nacionalidade = input("Digite a nacionalidade:")
-    idade = int(input("Digite a idade:"))
+    idade = input("Digite a idade:")
     ator.cadastrar_ator(cod_ator,nome,nacionalidade,idade)
 
 def _imprimir_ator(ator):
@@ -19,7 +19,7 @@ def _imprimir_ator(ator):
 
 def menu_buscar_ator():
     print("\nBuscar ator por código:\n")
-    cod_ator = int(input("Digite o código do ator"))
+    cod_ator = input("Digite o código do ator")
     a = ator.buscar_ator(cod_ator)
     if (a == None):
         print("Ator não encontrado!")
@@ -34,7 +34,7 @@ def menu_listar_atores():
 
 def menu_remover_ator():
     print("\nRemover Ator:\n")
-    cod_ator = int(input("Digite o código do ator:"))
+    cod_ator = input("Digite o código do ator:")
     a = ator.remover_ator(cod_ator)
     if (a == False):
         print("Ator não encontrado!")

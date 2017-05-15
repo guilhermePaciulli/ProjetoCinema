@@ -8,7 +8,7 @@ sessoes = []
 def criar_sessao(cod_sessao,cod_filme,cod_sala,horario):
     f = filme.buscar_filme(cod_filme)
     s = sala.buscar_sala(cod_sala)
-    if s != None and f != None:
+    if s != None and f != None and not(s[2]):
         sessoes.append([cod_sessao,f,s,horario, s[1]])
         return True
     return False

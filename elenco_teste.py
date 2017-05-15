@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-import elenco
-import filme
-import ator
+from logica import elenco
+from logica import filme
+from logica import ator
 import unittest
 
 filme.iniciar_filmes()

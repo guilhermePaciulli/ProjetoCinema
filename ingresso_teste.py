@@ -1,17 +1,20 @@
 # -*- coding: utf-8 -*-
 
-import ingresso
-import sala
-import sessao
+from logica import ingresso
+from logica import sala
+from logica import sessao
+from logica import filme
 import unittest
-
-sala.adicionar_sala(0, 2)
-sessao.criar_sessao(0, 0, 0, "14:30")
 
 class IngressoTeste(unittest.TestCase):
 
     def setUp(self):
         ingresso.remover_todos_ingresso()
+        sala.remover_todas_salas()
+        sessao.remover_todas_sessoes()
+        sala.adicionar_sala(0, 2)
+        filme.iniciar_filmes()
+        sessao.criar_sessao(0, 0, 0, "14:30")
 
     def test_vender_ingresso(self):
         s = ingresso.venda_ingresso_meia(1)
@@ -25,13 +28,13 @@ class IngressoTeste(unittest.TestCase):
 
     def test_remover_ingresso(self):
         s = ingresso.venda_ingresso_inteira(0)
-        ingresso.remover_ingresso(int(s))
+        ingresso.remover_ingresso((s))
         self.assertEqual(0, len(ingresso.listar_ingressos()))
         self.assertEqual(2, sessao.recuperar_sessao(0)[4])
 
     def test_buscar_ingresso(self):
         s = ingresso.venda_ingresso_meia(0)
-        self.assertIsNotNone(ingresso.buscar_ingresso(int(s)))
+        self.assertIsNotNone(ingresso.buscar_ingresso((s)))
 
     def test_remover_todos_ingressos(self):
         s = ingresso.venda_ingresso_inteira(0)

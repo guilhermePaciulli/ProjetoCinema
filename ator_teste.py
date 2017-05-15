@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import ator
+from logica import ator
 
 class AtorTeste(unittest.TestCase):
 

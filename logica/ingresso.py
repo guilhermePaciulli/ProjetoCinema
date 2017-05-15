@@ -8,10 +8,10 @@ def _venda_ingresso(cod_sessao):
     if s != None:
         lot = sessao.verificar_lotacao(cod_sessao)
         if not(lot) :
-            cod_ingresso = len(ingresso)
+            cod_ingresso = str(len(ingresso))
             ingresso.append([cod_sessao, cod_ingresso])
             s[4] -= 1
-            return str(cod_ingresso)
+            return cod_ingresso
         else:
             return False
     else:
@@ -52,5 +52,5 @@ def remover_todos_ingresso():
     ingresso = []
 
 def iniciar_ingressos():
-    venda_ingresso_meia(0)
-    venda_ingresso_inteira(0)
+    venda_ingresso_meia("0")
+    venda_ingresso_inteira("0")

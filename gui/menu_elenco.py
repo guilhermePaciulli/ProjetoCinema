@@ -12,18 +12,28 @@ def menu_adicionar_elenco():
     if not(b):
         print("Código do filme ou do ator inválido(s)")
 
-def _imprimir_elenco(elenco):
-    print("Código do elenco:",elenco[0])
-    atores = elenco.consultar_atores_por_filme(elenco[0])
-    for a in atores:
-        print("Ator do elenco:",a[1])
-        print("Nacionalidade do ator:",a[2])
-        print("Tipo do ator:",a[3])
+def _imprimir_elenco(e):
+    print("Código do elenco:",e[0])
+    print("Código do filme:",e[2][0])
+    print("Título do filme:",e[2][1])
+    print("Duração do filme:",e[2][2])
+    print("Classificação do filme:",e[2][3])
+    print("Diretor do filme:",e[2][4])
+    print("Distribuidor do filme:",e[2][5])
+    print("Status do filme:",e[2][6])
+    print("Gênero do filme:",e[2][7])
+    for a in e[1]:
+        print("Código do ator:",a[0][0])
+        print("Nome do ator:",a[0][1])
+        print("Nacionalidade do ator:",a[0][2])
+        print("Idade do ator:",a[0][3])
+        print("Tipo do ator:",a[1])
+        print()
     print()
 
 def menu_buscar_elenco():
     print("\nBuscar elenco por código:\n")
-    cod_elenco = int(input("Digite o código do elenco"))
+    cod_elenco = (input("Digite o código do elenco"))
     e = elenco.buscar_elenco(cod_elenco)
     if (e == None):
         print("Elenco não encontrado!")
@@ -32,17 +42,11 @@ def menu_buscar_elenco():
 
 def menu_buscar_elenco_por_filme():
     print("\nBuscar elenco por filme:\n")
-    cod_filme = int(input("Digite o código do filme:"))
-    elenco = elenco.buscar_elenco_por_filme(cod_filme)
-    if (cod_filme == None):
+    cod_filme = (input("Digite o código do filme:"))
+    e = elenco.buscar_elenco_por_filme(cod_filme)
+    if (e == None):
         print("Elenco não encontrado!")
     else:
-        _imprimir_elenco(elenco)
-
-def menu_listar_elencos():
-    print("\nListar elencos:\n")
-    elenco = elenco.buscar_elenco()
-    for e in elencos:
         _imprimir_elenco(e)
 
 def menu_remover_elenco():
@@ -61,28 +65,25 @@ def menu_remover_todos_elencos():
 def menu():
     while(True):
         print("1 - Adicionar ator ao elenco ou adicionar novo elenco")
-        print("2 - Listar elencos")
-        print("3 - Buscar elenco por código")
-        print("4 - Buscar elenco por filme")
-        print("5 - Remover elenco")
-        print("6 - Remover todos os elencos")
-        print("7 - Voltar")
+        print("2 - Buscar elenco por código")
+        print("3 - Buscar elenco por filme")
+        print("4 - Remover elenco")
+        print("5 - Remover todos os elencos")
+        print("6 - Voltar")
 
         op = int(input("Digite sua escolha: "))
-        while op < 1 or op > 7:
+        while op < 1 or op > 6:
             op = int(input("Entre com uma escolha válida: "))
 
         if(op == 1):
             menu_adicionar_elenco()
         elif(op == 2):
-            menu_listar_elencos()
-        elif(op == 3):
             menu_buscar_elenco()
-        elif(op == 4):
+        elif(op == 3):
             menu_buscar_elenco_por_filme()
-        elif(op == 5):
+        elif(op == 4):
             menu_remover_elenco()
-        elif(op == 6):
+        elif(op == 5):
             menu_remover_todos_elencos()
-        elif(op == 7):
+        elif(op == 6):
             break

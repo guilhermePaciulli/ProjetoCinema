@@ -14,13 +14,17 @@ def buscar_filme(cod_filme):
 def listar_filmes():
     return filmes
 
-def remover_filme():
-    filmes.remove(buscar_filme(cod_filme))
+def remover_filme(cod_filme):
+    for f in filmes:
+        if f[0] == cod_filme:
+            filmes.remove(f)
+            return True
+    return False
 
 def remover_todos_filmes():
     global filmes
     filmes = []
 
 def iniciar_filmes():
-    cadastrar_filme(0, "A volta daqueles não foram", 1.2, "Livre", "Steven Spielberg", "Universal", "Em cartaz", "Aventura")
-    cadastrar_filme(1, "A volta daqueles não foram 2: O retorno", 3.4, "Livre", "George Lucas", "Walt Disney", "Em breve", "Ação")
+    cadastrar_filme("0", "A volta daqueles não foram", "1.2", "Livre", "Steven Spielberg", "Universal", "Em cartaz", "Aventura")
+    cadastrar_filme("1", "A volta daqueles não foram 2: O retorno", "3.4", "Livre", "George Lucas", "Walt Disney", "Em breve", "Ação")

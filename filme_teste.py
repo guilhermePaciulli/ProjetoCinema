@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import filme
+from logica import filme
 
 class FilmeTeste(unittest.TestCase):
 

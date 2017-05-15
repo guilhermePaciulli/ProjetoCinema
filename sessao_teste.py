@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import sessao
-import sala
-import filme
+from logica import sessao
+from logica import sala
+from logica import filme
 
 sala.iniciar_salas()
 filme.iniciar_filmes()

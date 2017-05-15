@@ -4,15 +4,15 @@ from logica import sessao
 
 def menu_adicionar_sessao():
     print("\nAdicionar sessão:\n")
-    cod_sessao = int(input("Digite o código da sessão:"))
-    cod_filme = int(input("Digite o código do filme:"))
-    cod_sala = int(input("Digite o código da sala:"))
+    cod_sessao = (input("Digite o código da sessão:"))
+    cod_filme = (input("Digite o código do filme:"))
+    cod_sala = (input("Digite o código da sala:"))
     horario = input("Digite o horário da sessão:")
     b = sessao.criar_sessao(cod_sessao,cod_filme,cod_sala,horario)
     if b:
         print("Sessão adicionada com sucesso")
     else:
-        print("Código do filme ou da sala inválido(s)")
+        print("Código do filme ou da sala inválido(s) ou sala lotada!")
 
 def _imprimir_sessao(sessao):
     print("Código da sessão:",sessao[0])
@@ -23,7 +23,7 @@ def _imprimir_sessao(sessao):
 
 def menu_buscar_sessao():
     print("\nBuscar sessão por código:\n")
-    cod_sessao = int(input("Digite o código da sessão:"))
+    cod_sessao = (input("Digite o código da sessão:"))
     se = sessao.recuperar_sessao(cod_sessao)
     if (se == None):
         print("Sessão não encontrada!")
@@ -38,7 +38,7 @@ def menu_listar_sessoes():
 
 def menu_remover_sessao():
     print("\nRemover Sessão:\n")
-    cod_sessao = int(input("Digite o código do sessão:"))
+    cod_sessao = (input("Digite o código do sessão:"))
     s = sessao.remover_sessao(cod_sessao)
     if (s == False):
         print("Sessão não encontrada!")

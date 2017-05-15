@@ -4,18 +4,18 @@ from logica import sala
 
 def menu_adicionar_sala():
     print("\nAdicionar sala:")
-    cod_sala = int(input("Digite o código da sala:"))
-    lotacao = int(input("Digite a lotação da sala:"))
+    cod_sala = (input("Digite o código da sala:"))
+    lotacao = (input("Digite a lotação da sala:"))
     sala.adicionar_sala(cod_sala, lotacao)
 
 def menu_sala_ocupada():
     print("\nTornar sala ocupada:\n")
-    cod_sala = int(input("Digite o código da sala:"))
+    cod_sala = (input("Digite o código da sala:"))
     sala.definir_status_ocupada(cod_sala)
 
 def menu_sala_livre():
     print("\nTornar sala livre:\n")
-    cod_sala = int(input("Digite o código da sala:"))
+    cod_sala = (input("Digite o código da sala:"))
     sala.definir_status_livre(cod_sala)
 
 def _imprimir_sala(sala):
@@ -28,7 +28,7 @@ def _imprimir_sala(sala):
 
 def menu_buscar_sala():
     print("\nBuscar sala por código/:\n")
-    cod_sala = int(input("Digite o código da sala:"))
+    cod_sala = (input("Digite o código da sala:"))
     s = sala.buscar_sala(cod_sala)
     if (cod_sala == None):
         print("Sala não encontrada!")
@@ -43,7 +43,7 @@ def menu_listar_salas():
 
 def menu_remover_sala():
     print("\nRemover sala:\n")
-    cod_sala = int(input("Digite o código da sala:"))
+    cod_sala = (input("Digite o código da sala:"))
     s = sala.remover_sala(cod_sala)
     if (s == False):
         print("Sala não encontrada!")

@@ -4,15 +4,15 @@ from logica import filme
 
 def menu_adicionar_filme():
     print("\nAdicionar filme:\n")
-    cod_filme = int(input("Digite o código do filme:"))
+    cod_filme = input("Digite o código do filme:")
     titulo = input("Digite o título do filme:")
-    duracao = float(input("Digite a duração do filme:"))
+    duracao = input("Digite a duração do filme:")
     classificacao = input("Digite a classificação do filme:")
     diretor = input("Digite o diretor do filme:")
     dist = input("Digite a distribuidora do filme:")
     status = input("Digite o status do filme:")
     genero = input("Digite o gênero do filme:")
-    filme.cadastrar_filme(cod_filme, titulo, duracao, classificao, diretor, distribuidora, status, genero)
+    filme.cadastrar_filme(cod_filme, titulo, duracao, classificacao, diretor, dist, status, genero)
 
 def _imprimir_filme(filme):
     print("Código do filme:",filme[0])
@@ -27,7 +27,7 @@ def _imprimir_filme(filme):
 
 def menu_buscar_filme():
     print("\nBuscar filme por código:\n")
-    cod_filme = int(input("Digite o código do filme:"))
+    cod_filme = (input("Digite o código do filme:"))
     f = filme.buscar_filme(cod_filme)
     if (f == None):
         print("Filme não encontrado!")
@@ -42,7 +42,7 @@ def menu_listar_filmes():
 
 def menu_remover_filme():
     print("\nRemover Filme:\n")
-    cod_filme = int(input("Digite o código do filme:"))
+    cod_filme = (input("Digite o código do filme:"))
     f = filme.remover_filme(cod_filme)
     if (f == False):
         print("Filme não encontrado!")

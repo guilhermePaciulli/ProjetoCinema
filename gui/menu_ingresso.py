@@ -4,7 +4,7 @@ from logica import ingresso
 
 def menu_vender_ingresso_meia():
     print("\nVender ingresso meia:\n")
-    cod_sessao = int(input("Digite o código da sessão:"))
+    cod_sessao = input("Digite o código da sessão:")
     comprovante = input("Digite o comprovante de meia:")
     b = ingresso.venda_ingresso_meia(cod_sessao)
     if b == None:
@@ -16,7 +16,7 @@ def menu_vender_ingresso_meia():
 
 def menu_vender_ingresso_inteira():
     print("\nVender ingresso inteira:\n")
-    cod_sessao = int(input("Digite o código da sessão:"))
+    cod_sessao = (input("Digite o código da sessão:"))
     b = ingresso.venda_ingresso_inteira(cod_sessao)
     if b == None:
         print("Código de sessão inválido!")
@@ -25,14 +25,14 @@ def menu_vender_ingresso_inteira():
     else:
         print("\nVenda concluída com sucesso!\n")
 
-def _imprimir_ingresso(ingresso):
-    print("Código da sessão:",ingresso[0])
-    print("Código do ingresso:",ingresso[1])
+def _imprimir_ingresso(i):
+    print("Código da sessão:",i[0])
+    print("Código do ingresso:",i[1])
     print("")
 
 def menu_buscar_ingresso():
     print("\nBuscar ingresso por código:\n")
-    cod_ingresso = int(input("Digite o código do ingresso:"))
+    cod_ingresso = (input("Digite o código do ingresso:"))
     i = ingresso.buscar_ingresso(cod_ingresso)
     if (i == None):
         print("Ingresso não encontrada!")
@@ -41,20 +41,20 @@ def menu_buscar_ingresso():
 
 def menu_listar_ingressos():
     print("\nListar ingressos:\n")
-    ingressos = ingresso.listar_ingressos()
-    for i in ingressos:
+    g = ingresso.listar_ingressos()
+    for i in g:
         _imprimir_ingresso(i)
 
 def menu_listar_ingressos_vendidos():
     print("\nListar ingressos vendidos por sessão:\n")
-    cod_sessao = int(input("Digite a sessão desejada:"))
+    cod_sessao = (input("Digite a sessão desejada:"))
     ingressosV = ingresso.listar_ingressos_vendidos(cod_sessao)
     for i in ingressosV:
         _imprimir_ingresso(i)
 
 def menu_remover_ingresso():
     print("\nRemover Ingresso:\n")
-    cod_ingresso = int(input("Digite o código do ingresso:"))
+    cod_ingresso = (input("Digite o código do ingresso:"))
     i = ingresso.remover_ingresso(cod_ingresso)
     if i == False:
         print("Ingresso não encontrado!")
@@ -94,6 +94,6 @@ def menu():
         elif(op == 6):
             menu_remover_ingresso()
         elif(op == 7):
-            menu_remover_todos_ingressos
+            menu_remover_todos_ingressos()
         elif(op == 8):
             break

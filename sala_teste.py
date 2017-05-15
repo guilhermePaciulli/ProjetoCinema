@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import sala
+from logica import sala
 
 class SalaTeste(unittest.TestCase):
 
