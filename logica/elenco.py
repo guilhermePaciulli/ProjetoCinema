@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import ator
-import filme
+from logica import ator
+from logica import filme
 
 elencos = []
 

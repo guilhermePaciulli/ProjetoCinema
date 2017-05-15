@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import menu_inicial
 from logica import elenco
 
 def menu_adicionar_elenco():
@@ -25,11 +24,11 @@ def _imprimir_elenco(elenco):
 def menu_buscar_elenco():
     print("\nBuscar elenco por código:\n")
     cod_elenco = int(input("Digite o código do elenco"))
-    elenco = elenco.buscar_elenco(cod_elenco)
-    if (cod_elenco == None):
+    e = elenco.buscar_elenco(cod_elenco)
+    if (e == None):
         print("Elenco não encontrado!")
     else:
-        _imprimir_elenco(elenco)
+        _imprimir_elenco(e)
 
 def menu_buscar_elenco_por_filme():
     print("\nBuscar elenco por filme:\n")

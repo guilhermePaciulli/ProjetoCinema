@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import menu_inicial
 from logica import sessao
 
 def menu_adicionar_sessao():
@@ -25,11 +24,11 @@ def _imprimir_sessao(sessao):
 def menu_buscar_sessao():
     print("\nBuscar sessão por código:\n")
     cod_sessao = int(input("Digite o código da sessão:"))
-    sessao = sessao.recuperar_sessao(cod_sessao)
-    if (cod_sessao == None):
+    se = sessao.recuperar_sessao(cod_sessao)
+    if (se == None):
         print("Sessão não encontrada!")
     else:
-        _imprimir_sessao(sessao)
+        _imprimir_sessao(se)
 
 def menu_listar_sessoes():
     print("\nListar sessões:\n")

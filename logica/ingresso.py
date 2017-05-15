@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import sessao
+from logica import sessao
 
 ingresso =[]
 def _venda_ingresso(cod_sessao):
@@ -26,7 +26,7 @@ def venda_ingresso_inteira(cod_sessao):
 def listar_ingressos_vendidos(cod_sessao):
     ingressosVendidos = []
     for i in ingresso:
-        if i == cod_sessao:
+        if i[0] == cod_sessao:
             ingressosVendidos.append(i)
     return ingressosVendidos
 
@@ -48,8 +48,6 @@ def remover_ingresso(cod_ingresso):
         return False
 
 def remover_todos_ingresso():
-    for i in ingresso:
-        sessao.recuperar_sessao(i[0])[4] += 1
     global ingresso
     ingresso = []
 

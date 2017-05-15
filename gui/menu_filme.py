@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import menu_inicial
 from logica import filme
 
 def menu_adicionar_filme():
@@ -29,11 +28,11 @@ def _imprimir_filme(filme):
 def menu_buscar_filme():
     print("\nBuscar filme por código:\n")
     cod_filme = int(input("Digite o código do filme:"))
-    filme = filme.buscar_filme(cod_filme)
-    if (cod_filme == None):
+    f = filme.buscar_filme(cod_filme)
+    if (f == None):
         print("Filme não encontrado!")
     else:
-        _imprimir_filme(filme)
+        _imprimir_filme(f)
 
 def menu_listar_filmes():
     print("\nListar filmes:\n")

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import menu_inicial
 from logica import sala
 
 def menu_adicionar_sala():
     print("\nAdicionar sala:")
     cod_sala = int(input("Digite o código da sala:"))
     lotacao = int(input("Digite a lotação da sala:"))
-    sala.salas.append(cod_sala,lotacao)
+    sala.adicionar_sala(cod_sala, lotacao)
 
 def menu_sala_ocupada():
     print("\nTornar sala ocupada:\n")
@@ -30,11 +29,11 @@ def _imprimir_sala(sala):
 def menu_buscar_sala():
     print("\nBuscar sala por código/:\n")
     cod_sala = int(input("Digite o código da sala:"))
-    sala = sala.buscar_sala(cod_sala)
+    s = sala.buscar_sala(cod_sala)
     if (cod_sala == None):
         print("Sala não encontrada!")
     else:
-        _imprimir_sala(cod_sala)
+        _imprimir_sala(s)
 
 def menu_listar_salas():
     print("\nListar salas:\n")
@@ -72,7 +71,7 @@ def menu():
             op = int(input("Entre com uma escolha válida: "))
 
         if(op == 1):
-            menu_adicionar_sala()()
+            menu_adicionar_sala()
         elif(op == 2):
             menu_sala_ocupada()
         elif(op == 3):

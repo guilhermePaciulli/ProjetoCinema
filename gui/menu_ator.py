@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import menu_inicial
 from logica import ator
 
 def menu_adicionar_ator():
@@ -21,11 +20,11 @@ def _imprimir_ator(ator):
 def menu_buscar_ator():
     print("\nBuscar ator por código:\n")
     cod_ator = int(input("Digite o código do ator"))
-    ator = ator.buscar_ator(cod_ator)
-    if (cod_ator == None):
+    a = ator.buscar_ator(cod_ator)
+    if (a == None):
         print("Ator não encontrado!")
     else:
-        _imprimir_ator(ator)
+        _imprimir_ator(a)
 
 def menu_listar_atores():
     print("\nListar Atores:\n")

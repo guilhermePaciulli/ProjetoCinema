@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from logica import sessao
-from logica import filme
 from logica import ingresso
-import menu_inicial
 
 def menu_vender_ingresso_meia():
     print("\nVender ingresso meia:\n")
@@ -36,11 +33,11 @@ def _imprimir_ingresso(ingresso):
 def menu_buscar_ingresso():
     print("\nBuscar ingresso por código:\n")
     cod_ingresso = int(input("Digite o código do ingresso:"))
-    ingresso = ingresso.buscar_ingresso(cod_ingresso)
-    if (cod_ingresso == None):
+    i = ingresso.buscar_ingresso(cod_ingresso)
+    if (i == None):
         print("Ingresso não encontrada!")
     else:
-        _imprimir_ingresso(ingresso)
+        _imprimir_ingresso(i)
 
 def menu_listar_ingressos():
     print("\nListar ingressos:\n")
@@ -51,14 +48,14 @@ def menu_listar_ingressos():
 def menu_listar_ingressos_vendidos():
     print("\nListar ingressos vendidos por sessão:\n")
     cod_sessao = int(input("Digite a sessão desejada:"))
-    ingressos = ingresso.listar_ingressos_vendidos(cod_sessao)
-    for i in ingressos:
+    ingressosV = ingresso.listar_ingressos_vendidos(cod_sessao)
+    for i in ingressosV:
         _imprimir_ingresso(i)
 
 def menu_remover_ingresso():
     print("\nRemover Ingresso:\n")
     cod_ingresso = int(input("Digite o código do ingresso:"))
-    i = ingresso.remover_ingreso(cod_ingresso)
+    i = ingresso.remover_ingresso(cod_ingresso)
     if i == False:
         print("Ingresso não encontrado!")
     else:

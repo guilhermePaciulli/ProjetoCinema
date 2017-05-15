@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import filme
-import sala
+from logica import filme
+from logica import sala
 
 sessoes = []
 
